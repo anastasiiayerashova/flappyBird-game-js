@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Itim&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: "Roboto Mono", monospace;
 }
 
 .logo {
@@ -39,4 +42,17 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.firstWrapper {
+  display: flex;
+  gap: 60px;
+  text-align: left;
+}
+
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
 }

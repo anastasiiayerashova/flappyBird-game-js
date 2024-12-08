@@ -1,0 +1,12 @@
+.form {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.input {
+  width: 70%;
+  border-radius: 8px;
+  text-align: center;
+  border: 2px solid #747bff;
+}
