@@ -23,8 +23,7 @@ export default function TaskList() {
         <motion.ul className={s.list}
             initial="hidden"
             whileInView="visible"
-            animate='visible'
-            >
+        animate='visible'>
             {visibleItems.map((item, index) => (
                 <MTask key={item.id} {...item} custom={index + 1}
                 variants={featureAnimation}/>

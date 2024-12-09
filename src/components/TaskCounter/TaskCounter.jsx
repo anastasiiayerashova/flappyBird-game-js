@@ -22,8 +22,8 @@ export default function TaskCounter() {
         <div>
             <motion.h2 variants={textAnimation} custom={1}>Tasks</motion.h2>
             <div className={s.textWrapper}> 
-                <p className={s.text}>Active: {count.active}</p>
-                <p className={s.text}>Completed: {count.completed}</p>
+                <motion.p className={s.text} variants={textAnimation} custom={2}>Active: {count.active}</motion.p>
+                <motion.p className={s.text} variants={textAnimation} custom={2}>Completed: {count.completed}</motion.p>
             </div>
         </div>
     )
