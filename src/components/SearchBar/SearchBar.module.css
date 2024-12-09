@@ -1,5 +1,5 @@
 .input {
-  width: 40%;
+  width: 30%;
   border-radius: 8px;
   height: 30px;
   text-align: center;
@@ -9,4 +9,15 @@
 .inputWrapper {
   display: flex;
   justify-content: flex-start;
+  position: relative;
+}
+.icon {
+  position: absolute;
+  left: 160px;
+  top: 4px;
+  color: #747bff;
+  background-color: transparent;
+  padding: 0;
+  outline: none;
+  border: none;
 }

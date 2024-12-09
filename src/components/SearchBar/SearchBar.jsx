@@ -1,6 +1,6 @@
-import { useDispatch, useSelector} from 'react-redux'
+import { useDispatch} from 'react-redux'
 import s from './SearchBar.module.css'
-
+import { LiaSearchSolid } from "react-icons/lia";
 import { changeFilter } from '../../redux/tasksSlice'
 
 
@@ -12,6 +12,9 @@ export default function SearchBar() {
     }
     return (
         <div className={s.inputWrapper}> 
+            <button type='submit' className={s.icon}>
+                     <LiaSearchSolid size={28}/>
+                    </button>
             <input type='text' placeholder='Search...' className={s.input} onChange={handleChangeFilter}></input>
         </div>
     )
