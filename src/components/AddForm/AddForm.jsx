@@ -32,10 +32,13 @@ const textAnimation = {
 }
 
 export default function AddForm() {
+
     const initialValues = {
         task: '',
     }
+
     const dispatch = useDispatch()
+
     const handleAddTask = (values, actions) => {
         const newTask = {
             text: values.task,
@@ -45,12 +48,15 @@ export default function AddForm() {
         dispatch(addTask(newTask))
         actions.resetForm()
     }
+
     return (
         <Formik initialValues={initialValues} onSubmit={handleAddTask}>
-            <Form className={s.form}>
-                <motion.input type='text' name='task' className={s.input} placeholder='Enter task text...' custom={2} variants={textAnimation}/>
-                <motion.button type='submit' variants={btnAnimation} initial='initial' animate='animate' transition='transition'>Add task</motion.button>
-            </Form>
-    </Formik>
+            {({ values, handleChange }) => (
+                <Form className={s.form}>
+                    <motion.input onChange={handleChange} value={values.task} type='text' name='task' className={s.input} placeholder='Enter task text...' custom={2} variants={textAnimation} />
+                    <motion.button type='submit' variants={btnAnimation} initial='initial' animate='animate' transition='transition'>Add task</motion.button>
+                </Form>
+            )}
+        </Formik>
     )
 }
