@@ -5,8 +5,14 @@
 }
 
 .input {
-  width: 70%;
+  width: 65%;
   border-radius: 8px;
   text-align: center;
   border: 2px solid #747bff;
+}
+
+@media screen and (min-width: 768px) {
+  .input {
+    width: 70%;
+  }
 }

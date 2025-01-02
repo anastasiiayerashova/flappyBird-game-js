@@ -1,5 +1,5 @@
 .input {
-  width: 30%;
+  width: 40%;
   border-radius: 8px;
   height: 30px;
   text-align: center;
@@ -13,11 +13,17 @@
 }
 .icon {
   position: absolute;
-  left: 160px;
+  left: 120px;
   top: 4px;
   color: #747bff;
   background-color: transparent;
   padding: 0;
   outline: none;
   border: none;
+}
+
+@media screen and (min-width: 768px) {
+  .icon {
+    left: 200px;
+  }
 }

@@ -21,6 +21,17 @@ const textAnimation = {
     })
 }
 
+ const titleAnimation = {
+    hidden: { 
+        scale: 0.5, 
+        opacity: 0 
+    },
+   visible: {
+     scale: 1,
+     opacity: 1
+    }
+};
+
 export default function App() {
     const dispatch = useDispatch()
 
@@ -30,7 +41,7 @@ export default function App() {
 
     return (
         <motion.div initial='hidden' whileInView='visible' className='mainWrapper'>
-          <motion.h1 custom={1} variants={textAnimation} className='title'>Welcome to your personal Task Counter!</motion.h1>
+          <motion.h1 variants={titleAnimation} initial='hidden' whileInView='visible' className='title'>Welcome to your personal Task Counter!</motion.h1>
           <div className='firstWrapper'>
             <TaskCounter/>
             <StatusFilter/>
