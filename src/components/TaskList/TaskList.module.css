@@ -1,5 +1,11 @@
 .list {
   margin: 0;
   padding: 0;
-  width: 100%;
+  width: 97%;
+}
+
+@media screen and (min-width: 768px) {
+  .list {
+    width: 100%;
+  }
 }
